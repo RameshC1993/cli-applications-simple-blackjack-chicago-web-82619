@@ -42,8 +42,7 @@ def hit?(num)
       puts "inside else"
       invalid_command
       prompt_user
-  else
-    
+    end
   end
   
   return num
