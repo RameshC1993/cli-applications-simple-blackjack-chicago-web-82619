@@ -40,6 +40,7 @@ def hit?(num)
   elsif input == "s"
   
   else
+    puts "inside else"
     invalid_command
     prompt_user
   end
