@@ -37,12 +37,13 @@ def hit?(num)
   
   if input == "h"
     num += deal_card
-  elsif input == "s"
-  
   else
-    puts "inside else"
-    invalid_command
-    prompt_user
+    if input != "s"
+      puts "inside else"
+      invalid_command
+      prompt_user
+  else
+    
   end
   
   return num
