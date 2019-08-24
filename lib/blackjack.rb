@@ -39,7 +39,6 @@ def hit?(num)
     num += deal_card
   else
     if input != "s"
-      puts "inside else"
       invalid_command
       prompt_user
     end
