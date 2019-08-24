@@ -18,16 +18,29 @@ def get_user_input
   gets.strip
 end
 
-def end_game
-  # code #end_game here
+def end_game(card_total)
+  puts "Sorry, you hit #{card_total}"
 end
 
 def initial_round
-  # code #initial_round here
+  num_1 = deal_card
+  num_2 = deal_card
+  
+  display_card_total(num_1 + num_2)
 end
 
-def hit?
-  # code hit? here
+def hit?(num)
+  prompt_user
+  input = get_user_input
+  
+  if input == "h"
+    num += deal_card
+  elsif input != "s"
+    invalid_command
+    prompt_user
+  end
+  
+  return num
 end
 
 def invalid_command
